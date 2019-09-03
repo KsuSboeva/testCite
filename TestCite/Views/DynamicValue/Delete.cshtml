@@ -1,0 +1,64 @@
+﻿@model TestCite.Models.DynamicValue
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DynamicValue</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.order.orderId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.order.orderId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.settingId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.settingId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.settingName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.settingName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.templateID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.templateID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dynamicValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dynamicValue)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
